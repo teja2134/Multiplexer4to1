@@ -35,7 +35,35 @@ STEP:7 compare the output with truth table.
 
 # PROGRAM:
 
+module mux(a,b,d,y);
+
+input a,b;
+
+input [3:0]d;
+
+output y;
+
+wire w1,w2,w3,w4;
+
+assign w1=~a&~b&d[0];
+
+assign w2=~a&b&d[1];
+
+assign w3=~a&~b&d[2];
+
+assign w4=a&b&d[3];
+
+assign y=w1|w2|w3|w4;
+
+endmodule
 
 
 # OUTPUT:
+
+<img width="623" alt="mux4" src="https://github.com/teja2134/Multiplexer4to1/assets/161149578/064c6a0f-398d-49b9-8f17-6ac0994024ae">
+
+# RESULT:
+
+Thus the verilog program for multiplexer has been simulated and verified successfully.
+
 
